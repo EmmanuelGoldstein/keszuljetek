@@ -1,3 +1,93 @@
-<html>
-<body>Szia világ!</body>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Készüljetek!</title>
+	<style type="text/css">
+		.container {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5vh;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header"
+    "blog"
+    "youtube";
+}
+
+.header { grid-area: header; }
+
+.blog { grid-area: blog; }
+
+.youtube { grid-area: youtube; }
+
+body{
+	background-color:#292a2d;
+}
+h1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 30px;
+  padding: 30px 30px;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  color: #3367d6;
+  background-color: #292a2d;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
+}
+
+
+
+button {
+	width: 50vw;
+	height: 20vh;
+	margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 0.25em 0.75em;
+  }
+}
+</style>
+<script>
+        function blog(){
+            location.href ="https://keszuljetek.blogspot.com/";
+        }
+        function youtube(){
+            location.href ="https://www.youtube.com/c/keszuljetek";
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+  <div class="header"><h1>Útelágazódáshoz érkeztünk...</h1></div>
+  <div class="blog"><button onclick="blog()">Készüljetek! blog</button></div>
+  <div class="youtube"><button onclick="youtube()">Készüljetek! YouTube</button></div>
+</div>
+
+</body>
 </html>
