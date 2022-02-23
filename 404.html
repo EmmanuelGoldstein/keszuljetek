@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Készüljetek!</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<style>
+	body {
+		padding: 0;
+		margin: 0;
+		background-color: #111111;
+		overflow-x: hidden;
+		text-align: center;
+		font-size: 20pt;
+		color: white;
+		font-family: "Noto Sans";
+		font-weight: bolder;
+	}
+	
+	.bg {
+		position: fixed;
+		top: -50%;
+		left: -50%;
+		right: -50%;
+		bottom: -50%;
+		width: 200%;
+		height: 200vh;
+		background: transparent url("https://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+		background-repeat: repeat;
+		animation: bg-animation .2s infinite;
+		opacity: 1;
+		visibility: visible;
+	}
+	
+	@keyframes bg-animation {
+		0% {
+			transform: translate(0, 0);
+		}
+		10% {
+			transform: translate(-5%, -5%);
+		}
+		20% {
+			transform: translate(-10%, 5%);
+		}
+		30% {
+			transform: translate(5%, -10%);
+		}
+		40% {
+			transform: translate(-5%, 15%);
+		}
+		50% {
+			transform: translate(-10%, 5%);
+		}
+		60% {
+			transform: translate(15%, 0);
+		}
+		70% {
+			transform: translate(0, 10%);
+		}
+		80% {
+			transform: translate(-15%, 0);
+		}
+		90% {
+			transform: translate(10%, 5%);
+		}
+		100% {
+			transform: translate(5%, 0);
+		}
+	}
+	
+	.container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		gap: 0px 0px;
+		grid-auto-flow: row;
+	}
+	
+	button {
+		width: 40%;
+		left: 30%;
+		align-items: center;
+		border: 0;
+		border-radius: 8px;
+		box-sizing: border-box;
+		color: #ffffff;
+		display: flex;
+		font-family: "Noto Sans";
+		font-weight: bold;
+		font-size: 12.5pt;
+		line-height: 1em;
+		padding: 3px;
+		cursor: pointer;
+	}
+	
+	button span {
+		background-color: black;
+		padding: 16px 16px;
+		border-radius: 6px;
+		width: 100%;
+		height: 100%;
+		transition: 750ms;
+	}
+	
+	button:hover span {
+		background: none;
+	}
+	
+	#blog_button {
+		position: absolute;
+		bottom: 52.5%;
+		background-image: linear-gradient(150deg, rgb(51, 103, 214) 30%, rgb(130, 176, 235));
+		box-shadow: rgba(90, 139, 224, 0.2) 0 0px 50px 15px;
+	}
+	
+	#youtube_button {
+		position: absolute;
+		top: 52.5%;
+		background-image: linear-gradient(150deg, rgb(255, 0, 0) 30%, rgb(232, 81, 53));
+		box-shadow: rgba(243, 40, 26, 0.2) 0 0px 50px 15px;
+	}
+	</style>
+	<script>
+	function blog() {
+		location.href = "https://keszuljetek.blogspot.com";
+	}
+
+	function youtube() {
+		location.href = "https://www.youtube.com/c/keszuljetek";
+	}
+	</script>
+</head>
+
+<body>
+	<div class="bg"></div>
+	<div class="container">
+		<p>Készüljetek!</p>
+		<button id="blog_button" onclick="blog()"><span>Blog</span></button>
+		<button id="youtube_button" onclick="youtube()"><span>YouTube</span></button>
+	</div>
+</body>
+
+</html>
