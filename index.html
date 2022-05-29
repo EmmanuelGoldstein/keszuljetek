@@ -1,106 +1,111 @@
 <!DOCTYPE html>
 <html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Készüljetek!</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:wght@100&display=swap" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <style>
+            body {
+                animation-duration: 20s;
+                animation-iteration-count: infinite;
+                animation-name: color;
+                color: white;
+                font-family: "Montserrat", sans-serif;
+                font-size: 19pt;
+                font-weight: lighter;
+                margin: 0;
+                overflow-x: hidden;
+                padding: 0;
+                text-align: center;
+            }
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Készüljetek!</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:wght@100&display=swap" />
-	<link rel="icon" type="image/x-icon" href="favicon.ico" />
-	<style>
-	body {
-		animation-duration: 20s;
-		animation-iteration-count: infinite;
-		animation-name: color;
-		color: white;
-		font-family: "Montserrat", sans-serif;
-		font-size: 19pt;
-		font-weight: lighter;
-		margin: 0;
-		overflow-x: hidden;
-		padding: 0;
-		text-align: center;
-	}
-	
-	@keyframes color {
-		0% {
-			background-color: #4285f4;
-		}
-		25% {
-			background-color: #db4437;
-		}
-		50% {
-			background-color: #f4b400;
-		}
-		75% {
-			background-color: #0f9d58;
-		}
-		100% {
-			background-color: #4285f4;
-		}
-	}
-	
-	.container {
-		display: grid;
-		gap: 0px 0px;
-		grid-auto-flow: row;
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr;
-	}
-	
-	button {
-		background: transparent;
-		border-radius: 8px;
-		border: 1px solid white;
-		box-sizing: border-box;
-		color: #ffffff;
-		cursor: pointer;
-		display: inline-block;
-		font-family: "Montserrat", sans-serif;
-		font-size: 12.5pt;
-		font-weight: lighter;
-		left: 30%;
-		line-height: 1em;
-		padding: 13px 18px;
-		position: absolute;
-		transition: 0.35s;
-		width: 40%;
-	}
-	
-	button:hover {
-		border-color: #282828;
-		color: #282828;
-		transition: 0.35s;
-	}
-	
-	#blog_button {
-		bottom: 52.5%;
-	}
-	
-	#youtube_button {
-		top: 52.5%;
-	}
-	</style>
-	<script>
-	function blog() {
-		location.href = "https://keszuljetek.blogspot.com";
-	}
+            @keyframes color {
+                0% {
+                    background-color: #4285f4;
+                }
+                25% {
+                    background-color: #db4437;
+                }
+                50% {
+                    background-color: #f4b400;
+                }
+                75% {
+                    background-color: #0f9d58;
+                }
+                100% {
+                    background-color: #4285f4;
+                }
+            }
 
-	function youtube() {
-		location.href = "https://www.youtube.com/c/keszuljetek";
-	}
-	</script>
-</head>
+            .container {
+                display: grid;
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+            }
 
-<body>
-	<div class="bg">
-		<div class="container">
-			<p>Készüljetek!</p>
-			<button id="blog_button" onclick="blog()">blog</button>
-			<button id="youtube_button" onclick="youtube()">YouTube</button>
-		</div>
-	</div>
-</body>
+            button {
+                background: transparent;
+                border-radius: 8px;
+                border: 1px solid white;
+                box-sizing: border-box;
+                color: #ffffff;
+                cursor: pointer;
+                display: inline-block;
+                font-family: "Montserrat", sans-serif;
+                font-size: 12.5pt;
+                font-weight: lighter;
+                left: 30%;
+                line-height: 1em;
+                padding: 13px 18px;
+                position: absolute;
+                transition: 0.35s;
+                width: 40%;
+            }
 
+            button:hover {
+                border-color: #282828;
+                color: #282828;
+                transition: 0.35s;
+            }
+
+            @media only screen and (min-width: 600px) {
+                button {
+                    left: 40%;
+                    width: 20%;
+                }
+            }
+
+            #blog_button {
+                bottom: 52.5%;
+            }
+
+            #youtube_button {
+                top: 52.5%;
+            }
+        </style>
+        <script>
+            function blog() {
+                location.href = "https://keszuljetek.blogspot.com";
+            }
+
+            function youtube() {
+                location.href = "https://www.youtube.com/c/keszuljetek";
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="bg">
+            <div class="container">
+                <p>Készüljetek!</p>
+                <button id="blog_button" onclick="blog()">blog</button>
+                <button id="youtube_button" onclick="youtube()">YouTube</button>
+            </div>
+        </div>
+    </body>
 </html>
